@@ -3,6 +3,9 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+
+// données stockées pour l'utilisation des pipes de trie par prix et du filtre par nom
+
 export class DataService {
 
   private produits = [

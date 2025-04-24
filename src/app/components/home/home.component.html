@@ -11,7 +11,7 @@
     <div class="content container-fluid">
 
 
-
+      <!-- trie par prix et filtrage par nom-->
 
       <div class="container d-flex justify-content-between align-items-center">
 
@@ -23,6 +23,7 @@
 
       </div>
       
+       <!-- affichage des card bootstrap avec pipes pour récupérations des infos des produits-->
       <div class="row">
         <app-card [produits]="produits | filter:searchTerm | sortByPrice : sortField : sortOrder"></app-card>
       </div>
