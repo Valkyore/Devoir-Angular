@@ -1,0 +1,5 @@
+.fixed-img {
+  height: 500px;
+  object-fit:scale-down;
+  width: 100%;
+}

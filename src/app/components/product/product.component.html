@@ -1,0 +1,18 @@
+
+<app-header></app-header>
+<div class="content">
+
+    <div *ngIf="produit" class="container mt-4">
+        <h2>{{produit.name}}</h2>
+        <img [src]="produit.Image" alt="{{ produit.name }}" class="img-fluid" />
+        <p><strong>Nom :</strong> {{ produit.name }}</p>
+        <p><strong>Prix :</strong> {{ produit.price }} €</p>
+        <p><strong>Description :</strong> {{ produit.description || 'Aucune description disponible.' }}</p>
+        <a class="btn btn-secondary" routerLink="/">Retour</a>
+      </div>
+      
+      <div *ngIf="!produit">
+        <p class="text-danger">Produit non trouvé.</p>
+      </div>
+</div>
+<app-footer class="footer"></app-footer>

@@ -1,0 +1,7 @@
+.navbar-nav, .navbar-expand-lg {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color:#DA001E ;
+  }
+  

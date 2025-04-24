@@ -1,0 +1,35 @@
+<main class="main">
+
+    <app-header></app-header>
+    <app-caroussel></app-caroussel>
+
+    <div class="titre">
+      <h2 class="text-center py-5">Nos produits</h2>
+      <hr class="border-5 border-black opacity-100">
+    </div>
+
+    <div class="content container-fluid">
+
+
+
+
+      <div class="container d-flex justify-content-between align-items-center">
+
+        <button class="btn btn-primary" (click)="toggleOrder()">Trier par prix {{ sortOrder === 'asc' ? 'croissant' : 'décroissant' }}</button>
+
+        <div>
+          <input type="text" class="form-control" placeholder="Rechercher par nom" [(ngModel)]="searchTerm">
+        </div>
+
+      </div>
+      
+      <div class="row">
+        <app-card [produits]="produits | filter:searchTerm | sortByPrice : sortField : sortOrder"></app-card>
+      </div>
+
+
+    </div>
+
+    <app-footer class="footer"></app-footer>
+
+  </main>

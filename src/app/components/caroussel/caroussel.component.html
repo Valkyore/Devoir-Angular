@@ -1,0 +1,29 @@
+<div class="carousel-wrapper position-relative">
+
+  <!-- Titre superposé -->
+  <h1 class="carousel-title position-absolute top-50 start-50 translate-middle text-white text-center">
+    Bienvenue au petit village
+  </h1>
+
+ 
+
+<ngb-carousel [interval]="3000" [wrap]="true" [keyboard]="false" [pauseOnHover]="false" [showNavigationArrows]="false" [showNavigationIndicators]="true">
+    <ng-template ngbSlide *ngFor="let img of images; let i = index" [id]="'slide-' + i">
+        <div class="carousel-img-container">
+            <img [src]="img" class="img-fluid mx-auto d-block" alt="Image {{ i + 1 }}">
+          </div>
+    </ng-template>
+  </ngb-carousel>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+  
